@@ -349,12 +349,11 @@ function isStaff(interaction) {
 
 client.once(Events.ClientReady, async (readyClient) => {
     readyClient.user.setPresence({
-    activities: [
-        {
-            name: 'American Airlines Virtual',
-            type: 3
-        }
-    ],
+    activities: [{
+        name: 'Custom Status',
+        type: 4,
+        state: '✈️ Managing AAV Operations'
+    }],
     status: 'online'
 });
     console.log(`American Bot is online as ${readyClient.user.tag}!`);
